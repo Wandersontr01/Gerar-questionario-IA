@@ -24,6 +24,11 @@ Este projeto é um **gerador de questionários dinâmico** que se integra com o 
 │   ├── Exibição do resultado final
 ```
 
+## 🖼 Fluxo do Projeto
+Abaixo está um diagrama representando o fluxo do projeto.
+
+![Fluxo do Projeto](diagramas/fluxo_gerador_questionarios.jpg)
+
 ## 🔗 Fluxo de Execução
 1️⃣ **Usuário define os critérios** do questionário na tela inicial.  
 2️⃣ **SAP chama o CPI**, enviando os parâmetros definidos pelo usuário.  
