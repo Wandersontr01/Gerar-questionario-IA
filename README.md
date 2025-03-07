@@ -29,6 +29,21 @@ Abaixo está um diagrama representando o fluxo do projeto.
 
 ![Fluxo do Projeto](diagramas/fluxo_gerador_questionarios.jpg)
 
+## 🖥️ Capturas de Tela
+Aqui estão algumas imagens das telas do programa para melhor visualização do funcionamento:
+
+### 📌 Tela de Seleção de Critérios
+![Tela de Seleção](images/selecao_criterios.jpg)
+
+### 📌 Tela de Questões Objetivas
+![Questões Objetivas](images/questao_objetiva.jpg)
+
+### 📌 Tela de Questões Verdadeiro ou Falso
+![Questões VF](images/questao_vf.jpg)
+
+### 📌 Resultado Final
+![Resultado Final](images/tela_resultados.jpg)
+
 ## 🔗 Fluxo de Execução
 1️⃣ **Usuário define os critérios** do questionário na tela inicial.  
 2️⃣ **SAP chama o CPI**, enviando os parâmetros definidos pelo usuário.  
