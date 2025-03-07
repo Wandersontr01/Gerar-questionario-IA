@@ -15,7 +15,7 @@ Este projeto é um **gerador de questionários dinâmico** que se integra com o 
 ## 🏗 Arquitetura do Projeto
 ```
 📂 ZTESTE_WFG
-├── 📜 Relatório ABAP (ZTESTE_WFG)
+├── 📜 Relatório ABAP (ZR_GERAR_QUESTIONARIOS)
 │   ├── Geração da tela de seleção (SELECTION-SCREEN)
 │   ├── Integração com SAP CPI (ZCL_CPI_CONNECTION_MAINTAIN)
 │   ├── Processamento e estruturação das questões
@@ -46,6 +46,21 @@ Este projeto é um **gerador de questionários dinâmico** que se integra com o 
 - **f_mostrar_questoes** → Exibe as questões para o usuário.
 - **f_corrige_questao** → Avalia e corrige as respostas do usuário.
 - **f_imprime_resultado** → Exibe a nota final e feedback.
+
+## 📂 Estrutura dos Includes
+Este projeto utiliza includes para organizar o código ABAP, garantindo modularidade e separação de responsabilidades. Abaixo estão os principais:
+
+#### **📜 Include [`ZR_GERAR_QUESTIONARIOS`](./ZR_GERAR_QUESTIONARIOS.abap) (Principal)**
+- **Finalidade:** Define a estrutura principal do programa e a ordem de execução dos processos. Ele chama os outros includes para organizar o código.
+
+#### **📜 Include [`ZR_GERAR_QUESTIONARIOS_top`](INCLUDES/ZR_GERAR_QUESTIONARIOS_SRC.abap)**
+- **Finalidade:** Contém a definição de variáveis globais, tipos de dados e tabelas internas utilizadas no programa.
+
+#### **📜 Include [`ZR_GERAR_QUESTIONARIOS_src`](INCLUDES/ZR_GERAR_QUESTIONARIOS_SRC.abap)**
+- **Finalidade:** Responsável por gerenciar os eventos principais do programa, incluindo `INITIALIZATION`, `AT SELECTION-SCREEN` e `START-OF-SELECTION`. Também contém a lógica de controle de fluxo do questionário.
+
+#### **📜 Include [`ZR_GERAR_QUESTIONARIOS_f01`](INCLUDES/ZR_GERAR_QUESTIONARIOS_F01.abap)**
+- **Finalidade:** Armazena todas as subrotinas (*PERFORMs*) do programa, organizadas por funcionalidade, como geração de requisição, exibição de questões, correção de respostas e cálculo da nota final.
 
 ## 🏗 Estruturas ABAP
 ### **1️⃣ Estrutura `ZST_QUEST_REQUEST`**
